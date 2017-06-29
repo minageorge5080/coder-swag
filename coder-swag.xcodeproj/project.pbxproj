@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		892806151F031A9800019A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892806141F031A9800019A2F /* AppDelegate.swift */; };
-		892806171F031A9800019A2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892806161F031A9800019A2F /* ViewController.swift */; };
+		892806171F031A9800019A2F /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892806161F031A9800019A2F /* CategoriesVC.swift */; };
 		8928061A1F031A9800019A2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892806181F031A9800019A2F /* Main.storyboard */; };
 		8928061C1F031A9800019A2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8928061B1F031A9800019A2F /* Assets.xcassets */; };
 		8928061F1F031A9800019A2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8928061D1F031A9800019A2F /* LaunchScreen.storyboard */; };
+		8928062A1F031E3700019A2F /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892806291F031E3700019A2F /* CategoryCell.swift */; };
+		8928062C1F03214000019A2F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928062B1F03214000019A2F /* Category.swift */; };
+		8928062F1F0322C500019A2F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8928062E1F0322C500019A2F /* DataService.swift */; };
+		8979F6101F05A43900C5E4C5 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8979F60F1F05A43900C5E4C5 /* ProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		892806111F031A9800019A2F /* coder-swag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coder-swag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		892806141F031A9800019A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		892806161F031A9800019A2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		892806161F031A9800019A2F /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		892806191F031A9800019A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8928061B1F031A9800019A2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8928061E1F031A9800019A2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		892806201F031A9800019A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		892806291F031E3700019A2F /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		8928062B1F03214000019A2F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8928062E1F0322C500019A2F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		8979F60F1F05A43900C5E4C5 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		892806131F031A9800019A2F /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				8928062D1F0322BB00019A2F /* Services */,
+				892806281F031DD400019A2F /* View */,
+				892806271F031DC600019A2F /* Model */,
+				892806261F031DC000019A2F /* Controller */,
 				892806141F031A9800019A2F /* AppDelegate.swift */,
-				892806161F031A9800019A2F /* ViewController.swift */,
 				892806181F031A9800019A2F /* Main.storyboard */,
 				8928061B1F031A9800019A2F /* Assets.xcassets */,
 				8928061D1F031A9800019A2F /* LaunchScreen.storyboard */,
 				892806201F031A9800019A2F /* Info.plist */,
 			);
 			path = "coder-swag";
+			sourceTree = "<group>";
+		};
+		892806261F031DC000019A2F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				892806161F031A9800019A2F /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		892806271F031DC600019A2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8928062B1F03214000019A2F /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		892806281F031DD400019A2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				892806291F031E3700019A2F /* CategoryCell.swift */,
+				8979F60F1F05A43900C5E4C5 /* ProductCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8928062D1F0322BB00019A2F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8928062E1F0322C500019A2F /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				892806171F031A9800019A2F /* ViewController.swift in Sources */,
+				892806171F031A9800019A2F /* CategoriesVC.swift in Sources */,
 				892806151F031A9800019A2F /* AppDelegate.swift in Sources */,
+				8928062A1F031E3700019A2F /* CategoryCell.swift in Sources */,
+				8979F6101F05A43900C5E4C5 /* ProductCell.swift in Sources */,
+				8928062C1F03214000019A2F /* Category.swift in Sources */,
+				8928062F1F0322C500019A2F /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +360,7 @@
 				892806251F031A9800019A2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
